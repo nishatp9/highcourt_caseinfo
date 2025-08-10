@@ -21,11 +21,6 @@ Follow these steps to run the project locally.
 ### Steps
 
 1.  **Clone the repository:**
-    ```bash
-    git clone [https://github.com/YOUR_USERNAME/flask-delhi-highcourt-scraper.git](https://github.com/YOUR_USERNAME/flask-delhi-highcourt-scraper.git)
-    cd flask-delhi-highcourt-scraper
-    ```
-    *(Replace `YOUR_USERNAME` with your actual GitHub username)*
 
 2.  **Create and activate a virtual environment (recommended):**
     ```bash
@@ -44,7 +39,6 @@ Follow these steps to run the project locally.
     ```
 
 4.  **Install Playwright's browser dependencies:**
-    (This is a one-time setup that downloads the necessary browser binaries)
     ```bash
     python -m playwright install
     ```
