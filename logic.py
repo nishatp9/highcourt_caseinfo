@@ -55,7 +55,7 @@ def parse_case_row(row_locator,page):
 def get_case_details(case_type: str, case_number: str, year: str) -> dict:
     context = None
     try:
-        browser = sync_playwright().start().webkit.launch(headless=True)
+        browser = sync_playwright().start().chromium.launch(headless=True)
         context = browser.new_context(user_agent="Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/98.0.4758.102 Safari/537.36")
         page = context.new_page()
         page.route("**/*.{png,jpg,jpeg,css,woff2}", lambda route: route.abort())
@@ -81,4 +81,5 @@ def get_case_details(case_type: str, case_number: str, year: str) -> dict:
         return None # type: ignore
     finally:
         if context:
+
             context.close()
